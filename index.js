@@ -68,6 +68,7 @@ function setPiece() {
     checkWinner();
 }
 
+//horizontal check
 function checkWinner() {
     for (let r = 0; r < rows; r++) {
         for(let c = 0; c < columns - 3; c++) {
@@ -80,6 +81,7 @@ function checkWinner() {
         }
     }
 
+//vertical check
     for (let c = 0; c < columns; c++) {
         for (let r = 0; r < rows - 3; r++ )
         if (board[r][c] != '') {
@@ -89,7 +91,33 @@ function checkWinner() {
             }
         }
     }
+
+    //diagonal check
+    for (let r = 0; r < rows - 3; r++) {
+        for (let c = 0; c < columns - 3; c++) {
+        if (board[r][c] != '') {
+            if (board[r][c] == board[r+1][c+1] && board[r+1][c+1] == board[r+2][c+2] && board[r+2][c+2] == board[r+3][c+3]) {
+                setWinner(r, c);
+                return;
+            }
+        }
+    }
 }
+
+//     //reverse diagonal check
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns - 3; c++) {
+            if (board[r][c] != '') {
+                if (board[r][c] == board[r-1][c+1] && board[r-1][c+1] == board[r-2][c+2] && board[r-2][c+2] == board[r-3][c+3]) {
+                    setWinner(r, c);
+                    return;
+            }
+        }
+    }
+}
+
+}
+
 
 
 
