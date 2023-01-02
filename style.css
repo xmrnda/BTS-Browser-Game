@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+    color: #7800FF;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 900 bolder;
+    font-size: 55px;
+    -webkit-text-stroke: 1px white;
+}
+
+.title-container{
+    padding-top: 15px;
+}
+
+#winner{
+    text-align: center;
+    color: #7800FF;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 900 bolder;
+    font-size: 25px;
+    padding-bottom: 45px;
+
+}
+
+#board{
+    height: 540px;
+    width: 630px;
+    background-color: #AE6DFD;;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 10px solid white;
+
+}
+
+.tile {
+    height: 70px;
+    width: 70px;
+    margin: 5px; 
+
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid white
+}
+
+.dark-piece {
+    background-color: #7800FF;
+}
+
+.light-piece {
+    background-color: #C99CFF;
+}
+
+body{
+    background-color: #C99CFF;
+}
