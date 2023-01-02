@@ -1,0 +1,3 @@
+The inspiration for my browser game was to combine two of my favorite things. My favorite pop group is BTS, and my favorite board game growing up was Connect 4. Therefore, I decided to create a BTS-themed Connect 4 in-browser game. 
+
+Luckily for me, I grew up with a younger brother, and he was always my player 2. However, the game I coded is meant for people that want to play independently, without the need for a physical competitor. Instead, they will be playing against the computer itself, an AI. 
