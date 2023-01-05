@@ -131,7 +131,6 @@ function checkWinner() {
 
 
 // announce who wins
-
 function setWinner(r, c) {
     let winner = document.getElementById("winner");
     if (board[r][c] == playerDarkPurple) {
@@ -143,7 +142,5 @@ function setWinner(r, c) {
     gameOver = true;
 
 }
-
-// scoreboard
 
 
