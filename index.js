@@ -18,7 +18,7 @@ window.onload = function() {
     setGame();
 }
 
-
+// game board tiles as a grid
 function setGame () {
      board = [];
      currColumns = [5, 5, 5, 5, 5, 5, 5];
@@ -33,6 +33,8 @@ function setGame () {
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
             tile.classList.add("tile");
+
+            // click to setPiece (aka change circle color)
             tile.addEventListener("click", setPiece);
             document.getElementById("board").append(tile);
         }
@@ -40,16 +42,17 @@ function setGame () {
      }
 }
 
-// for pieces to land with gravity. not just where clicked
+
 function setPiece() {
     if (gameOver) {
         return;
     }
-    
+    // coordinates of each space and chip
     let coords = this.id.split("-");
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
 
+    // if column is full, return. no more chips to add
     r = currColumns[c];
     if (r < 0) {
         return;
@@ -66,7 +69,11 @@ function setPiece() {
         currPlayer = playerDarkPurple;
     }
 
+    // for pieces to land with gravity. not just where clicked
+    // updates row height
     r -= 1;
+
+    // updates array
     currColumns[c] = r;
 
     checkWinner();
