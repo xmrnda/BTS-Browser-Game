@@ -29,8 +29,9 @@ h1{
     display: flex;
     flex-wrap: wrap;
     border: 10px solid white;
-    
-    
+    position: sticky;
+    top: 200px;
+    bottom:0px;
 }
 
 #BT21{
@@ -42,8 +43,11 @@ h1{
 }
 
 #BTS-logo{
-    transform: translate(-100px,-690px);
+    transform: translate(-100px, -175px);
     width: 600px;
+    position: sticky;
+    top:0px;
+    bottom:0px;
 }
 
 .tile {
