@@ -34,11 +34,16 @@ h1{
 }
 
 #BT21{
-    transform: translate(620px, -430px);
+    transform: translate(471px, 12px);
+    width: 400px;
+    position: sticky;
+    top:0px;
+    bottom:0px;
 }
 
 #BTS-logo{
-    transform: translate(-50px,-650px);
+    transform: translate(-100px,-690px);
+    width: 600px;
 }
 
 .tile {
