@@ -29,7 +29,16 @@ h1{
     display: flex;
     flex-wrap: wrap;
     border: 10px solid white;
+    
+    
+}
 
+#BT21{
+    transform: translate(620px, -430px);
+}
+
+#BTS-logo{
+    transform: translate(-50px,-650px);
 }
 
 .tile {

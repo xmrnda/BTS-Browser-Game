@@ -9,12 +9,15 @@ var gameOver = false;
 var board;
 var currColumns;
 
+// game board
 var rows = 6;
 var columns = 7;
 
+// default settings when page loads
 window.onload = function() {
     setGame();
 }
+
 
 function setGame () {
      board = [];
@@ -37,6 +40,7 @@ function setGame () {
      }
 }
 
+// for pieces to land with gravity. not just where clicked
 function setPiece() {
     if (gameOver) {
         return;
@@ -81,7 +85,7 @@ function checkWinner() {
         }
     }
 
-//vertical check
+    //vertical check
     for (let c = 0; c < columns; c++) {
         for (let r = 0; r < rows - 3; r++ )
         if (board[r][c] != '') {
@@ -104,7 +108,7 @@ function checkWinner() {
     }
 }
 
-//     //reverse diagonal check
+    //reverse diagonal check
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns - 3; c++) {
             if (board[r][c] != '') {
@@ -119,7 +123,7 @@ function checkWinner() {
 }
 
 
-
+// announce who wins
 
 function setWinner(r, c) {
     let winner = document.getElementById("winner");
